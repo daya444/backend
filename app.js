@@ -9,7 +9,7 @@ const app = express();
 
 
 app.use(cors({ 
-  origin: "http://localhost:5173", 
+  origin: "https://66fc420df914aaa5ff72f43f--gbt-turbo.netlify.app/", 
   credentials: true 
 }));
 
