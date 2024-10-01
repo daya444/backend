@@ -58,6 +58,8 @@ export const UserSignup = async (req, res) => {
             path: "/",
             httpOnly: true,
             signed: true,
+             secure: true, // Set this to true if your site is HTTPS
+             sameSite: 'None'
         });
         
 
@@ -73,7 +75,9 @@ export const UserSignup = async (req, res) => {
             expires: expries,
             httpOnly: true,
             signed : true,
-            path: "/"
+            path: "/",
+             secure: true, // Set this to true if your site is HTTPS
+             sameSite: 'None'
            
           })
 
@@ -115,6 +119,8 @@ export const UserLogin = async (req, res) => {
             path: "/",
             httpOnly: true,
             signed: true,
+             secure: true, // Set this to true if your site is HTTPS
+             sameSite: 'None'
         });
         
 
@@ -130,7 +136,9 @@ export const UserLogin = async (req, res) => {
             expires: expries,
             httpOnly: true,
             signed : true,
-            path: "/"
+            path: "/",
+             secure: true, // Set this to true if your site is HTTPS
+             sameSite: 'None'
            
           })
 
@@ -192,7 +200,10 @@ export const userLogout = async (
         httpOnly: true,
         signed: true,
         path: "/",
-        domain: "localhost" // Adjust the domain if required (e.g., for production)
+        domain: "localhost" ,// Adjust the domain if required (e.g., for production)
+        secure: true, // Set this to true if your site is HTTPS
+        sameSite: 'None'
+        
       });
   
       return res.status(200).json({
