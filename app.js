@@ -16,7 +16,8 @@ app.use(cors({
 app.use(express.json());
 
 // Middleware to parse cookies
-app.use(cookieParser());
+app.use(cookieParser(process.env.COOKIE_SECRET));
+
 
 // Route definitions
 app.use("/api/v1", appRouter);
