@@ -10,7 +10,7 @@ const app = express();
 // CORS configuration
 app.use(cors({
   origin: [
-    "https://66fc420df914aaa5ff72f43f--gbt-turbo.netlify.app",
+    "https://gbt-turbo.netlify.app",
     "http://localhost:5173"
   ],
   credentials: true, // Allow cookies
